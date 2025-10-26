@@ -8,4 +8,7 @@ for i in range(len(word) - 1):
 newword += word[-1]
 
 print("After removing consecutive duplicates:", newword)
+import panagram 
+print(panagram)
+
 
