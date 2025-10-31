@@ -14,6 +14,6 @@ for char in originalMSG:
     else:
         corruptMSG+=char
         totalcount+=1
-print("The encoded message is:",corruptMSG)
+print("The COURPT message is:",corruptMSG)
 percentCorrupt=(couurptCount/totalcount)*100
 print("the courrtpion percentage is ", round(percentCorrupt,2),"%")

@@ -4,38 +4,16 @@ sentence is a pangram'''
 
 
 
-<<<<<<< HEAD
-
-# Step 1: Read input and convert to lowercase
 sentence = input("Enter a sentence: ").lower()
-
-# Step 2: Create a list of all alphabet letters
-alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-
-# Step 3: Create a list to track unique letters found
-found_letters = []
-
-# Step 4: Loop through each character in the sentence
-=======
-sentence = input("Enter a sentence: ").lower()
-
 
 alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 found_letters = []
 
-
->>>>>>> 02d3885 ( practice questions 25-10-2025)
 for char in sentence:
     if char in alphabet and char not in found_letters:
         found_letters.append(char)
-
-<<<<<<< HEAD
-# Step 5: Check if all 26 letters are found
-=======
->>>>>>> 02d3885 ( practice questions 25-10-2025)
 if len(found_letters) == 26:
     print("The entered sentence is a pangram")
 else:
     print("The entered sentence is not a pangram")
-

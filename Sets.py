@@ -16,12 +16,14 @@ M21=set1-set2
 print(M21, 'are missing in set 2')
 2.	Write a Python program to find all the unique words and count the frequency of occurrence from a given list of strings.
  Sample Input: words = ['Red', 'Green', 'Red', 'Blue', 'Red', 'Red', 'Green'] 
- Sample Output: Unique Words: ['Red', 'Green', 'Blue'] and frequency of occurrence: {'Red': 4, 'Blue': 1, 'Green': 2}'''
-words = ['Red', 'Green', 'Red', 'Blue', 'Red', 'Red', 'Green']
-words2=[]
-uniqueWords=[]
-for char in words:
-    words2+=char
-    if char in words2:
-      uniqueWords+=char
-      print(char.count(words2),f"is no.of times the {char} has repeated. ")
+ Sample Output: Unique Words: ['Red', 'Green', 'Blue'] and frequency of occurrence: {'Red': 4, 'Blue': 1, 'Green': 2}
+forbd_char={'@','#','$'}
+password=input("Enter a password : ")
+print(set(password).intersection(forbd_char),'is forbidden to use .')
+insta_followers={'a','b','c','d','e','f','g','h'}
+twitter_followers={'c','d','x','y','z','v','w'}
+print(twitter_followers.intersection(insta_followers),' are on both the  plateforms')
+print(insta_followers-twitter_followers.intersection(insta_followers),'are exclusive to instagram')
+print(insta_followers.union(twitter_followers)-twitter_followers.intersection(insta_followers),' are on atleast one account and dont overlap between the two ')
+'''
+

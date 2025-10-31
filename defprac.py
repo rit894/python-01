@@ -30,7 +30,7 @@ def factorial(n):
      result = result * i
     return result
 n=int(input('number : '))
-print(f'factorial of {n} is {factorial(n)}')'''
+print(f'factorial of {n} is {factorial(n)}')
 def palindrome_check(s):
     if s==s[::-1]:
         return "is"
@@ -38,7 +38,8 @@ def palindrome_check(s):
         return "is not"
     
 s=input ( 'text plz: ')
-print(f'the word{s} {palindrome_check(s)}  palinlindrome')
+print(f'the word {s} {palindrome_check(s)}  palinlindrome')'''
+
 
 
 
