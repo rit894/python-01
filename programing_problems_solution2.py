@@ -18,3 +18,9 @@ b. If the temperature is between 140 F and 200 F and the heating burner is off, 
 the ‘normal alarm’ signals.  
 c. If the temperature is greater than 200 F for more than 10 minutes and the heating 
 burner is on, ‘over heat alarm’ signals. '''
+
+finalTable=int(input("Enter the number you want to the tables upto : "))
+multiplier = int(input("Enter the final multiplier : "))
+for _ in range(1,1+finalTable):
+    for i in range(1,1+multiplier):
+        print(f"{_}x{i}=",_*i)
