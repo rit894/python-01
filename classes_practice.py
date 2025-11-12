@@ -43,3 +43,31 @@ account1.display()          # Hi Alice, your current balance is ₹1000
 account1.deposit(500)      # Alice deposited 500. New balance: 1500
 account1.withdraw(200)     # Alice withdrew 200. New balance: 1300
 '''
+'''class student:
+
+    def __init__(self,name,rollNo,DOB):
+        self.name=name
+        self.rollNo=rollNo
+        self.DOB=DOB
+
+    def jobs(self,position):
+        self.postion=position
+
+import datetime as dt
+
+name=input("Enter your name:")
+rollNo=input("Enter your roll number:")
+DOBY=int(input("Enter your date of birth year(YYYY):"))
+DOBM=int(input("Enter your date of birth month(MM):"))
+DOBD=int(input("Enter your date of birth day(DD):"))
+DOB=dt.datetime(DOBY,DOBM,DOBD)
+
+p_c=input('are you placed? (yes/no):').strip().lower()
+if p_c=='yes':
+    position=input('enter your position:')
+else:
+    position='not placed'
+
+s1=student(name,rollNo,DOB)
+s1.jobs(position)
+print(f"Name:{s1.name}\nRoll Number:{s1.rollNo}\nDate of Birth:{s1.DOB}\nPosition:{s1.postion}")'''
