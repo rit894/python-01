@@ -1,4 +1,4 @@
-'''class Dog:
+class Dog:
     species = "Canis familiaris"  # Class attribute
 
     def __init__(self, name, age):
@@ -19,8 +19,8 @@ print(Dog.name)        # ❌ Error
 dog1.species = "Wolf"  # Creates a new instance attribute
 print(dog1.species)    # "Wolf"
 print(dog2.species)    # "Canis familiaris"
-print(Dog.species)     # "Canis familiaris"'''
-'''class BankAccount:
+print(Dog.species)     # "Canis familiaris"
+class BankAccount:
     def __init__(self, name, amount):
         self.name = name
         self.amount = amount
@@ -42,8 +42,8 @@ account1 = BankAccount("Alice", 1000)
 account1.display()          # Hi Alice, your current balance is ₹1000       
 account1.deposit(500)      # Alice deposited 500. New balance: 1500
 account1.withdraw(200)     # Alice withdrew 200. New balance: 1300
-'''
-'''class student:
+
+class student:
 
     def __init__(self,name,rollNo,DOB):
         self.name=name
@@ -70,4 +70,4 @@ else:
 
 s1=student(name,rollNo,DOB)
 s1.jobs(position)
-print(f"Name:{s1.name}\nRoll Number:{s1.rollNo}\nDate of Birth:{s1.DOB}\nPosition:{s1.postion}")'''
+print(f"Name:{s1.name}\nRoll Number:{s1.rollNo}\nDate of Birth:{s1.DOB}\nPosition:{s1.postion}")
