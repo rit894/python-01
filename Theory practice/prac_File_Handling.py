@@ -48,5 +48,9 @@ if os.path.exists(file_path):
         print("File read successfully. Size:", len(data), "bytes")
 else:
     print("File not found. Please check the path or filename.")
+
 '''
+#for deleteing an entire file
+'''import os
+os.rmdir("myfolder")'''
           
