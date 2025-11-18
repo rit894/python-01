@@ -16,7 +16,7 @@ states = {
         "official": ["Tamil", "English"],
         "spoken": ["Telugu", "Kannada", "Urdu", "Malayalam", "Hindi"]
     },
-    "Telangana": {
+    "Telangana": { 
         "official": ["Telugu", "Urdu"],
         "spoken": ["Hindi", "Tamil", "Kannada", "Marathi", "Oriya"]
     }
@@ -24,17 +24,13 @@ states = {
 
 
 def max_languages_state():
-    count = 0
-    state = ''
-    for state, lan in states.items():
-        total = len(lan["official"]) + len(lan["spoken"])
-        match total > count:
-            case True:
-                count = total
-                max_state = state
-            case False:
-                pass 
-
+    max_count = 0
+    max_state = ""
+    for state, langs in states.items():
+        total = len(langs["official"]) + len(langs["spoken"])
+        if total > max_count:
+            max_count = total
+            max_state = state
     print(max_state)
     
         
