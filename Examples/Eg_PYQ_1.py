@@ -24,31 +24,43 @@ states = {
 
 
 def max_languages_state():
-    max_count = 0
-    max_state = ""
-    for state, langs in states.items():
-        total = len(langs["official"]) + len(langs["spoken"])
-        if total > max_count:
-            max_count = total
-            max_state = state
+    count = 0
+    state = ''
+    for state, lan in states.items():
+        total = len(lan["official"]) + len(lan["spoken"])
+        match total > count:
+            case True:
+                count = total
+                max_state = state
+            case False:
+                pass 
+
     print(max_state)
+    
+        
+       
 
 def count_spoken(state_name):
-    if state_name in states:
-        print(len(states[state_name]["spoken"]))
-    else:
-        print("Error")
+    match state_name in states:
+        case True:
+            print(len(states[state_name]["spoken"]))
+        case False: 
+            print(0)
 
 
 def states_with_language(language):
     result = []
     for state, langs in states.items():
-        if language in langs["spoken"] and language not in langs["official"]:
-            result.append(state)
-    if result:
-        print(" ".join(result))
-    else:
-        print("Error")
+        match language in langs["spoken"] not in langs["official"]:
+            case True:
+                result.append(state)
+            case False:
+                pass
+    match result:
+        case 1:
+            print(' '.join(result))
+        case _:
+            print("Error")
 
 def unique_languages():
     lang_count = {}
