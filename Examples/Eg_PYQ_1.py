@@ -26,11 +26,11 @@ states = {
 def max_languages_state():
     max_count = 0
     max_state = ""
-    for state, langs in states.items():
+    for s, l in states.items():
         total = len(langs["official"]) + len(langs["spoken"])
         if total > max_count:
             max_count = total
-            max_state = state
+            max_state = s
     print(max_state)
 
 def count_spoken(state_name):
