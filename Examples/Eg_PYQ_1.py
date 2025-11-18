@@ -83,3 +83,43 @@ elif user_input == "4":
     unique_languages()
 else:
     print("Error")
+class StateLanguages:
+    def __init__(self):
+        # Start with an empty dictionary instead of fixed data
+        self.states = {}
+
+    def add_state(self, state_name, official, spoken):
+        # Add a new state dynamically
+        self.states[state_name] = {
+            "official": official,
+            "spoken": spoken
+        }
+
+    def max_languages_state(self):
+        max_count = 0
+        max_state = ""
+        for state, langs in self.states.items():
+            total = len(langs["official"]) + len(langs["spoken"])
+            if total > max_count:
+                max_count = total
+                max_state = state
+        return max_state
+
+    def count_spoken(self, state_name):
+        if state_name in self.states:
+            return len(self.states[state_name]["spoken"])
+        return 0
+
+    def states_with_language(self, language):
+        result = []
+        for state, langs in self.states.items():
+            if language in langs["spoken"] and language not in langs["official"]:
+                result.append(state)
+        return result if result else None
+
+    def unique_languages(self):
+        lang_count = {}
+        for state, langs in self.states.items():
+            for lang in langs["spoken"]:
+                lang_count[lang] = lang_count.get(lang, 0) + 1
+        return [lang for lang, count in lang_count.items() if count == 1]
