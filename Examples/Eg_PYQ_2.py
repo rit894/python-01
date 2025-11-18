@@ -68,8 +68,30 @@ def cost_flower(cost):
          flowers1.append(flower)
    print(flowers1)
    print('these are avialable for this cost.')
-cost=int(input())
-cost_flower(cost)
+def unique_colours():
+   colour_count={}
+   for flower,colour in flowers.items():
+      for col in colour['colours']:
+         colour_count[col]=colour_count.get(col,0)+1
+   for col,count in colour_count.items():
+      if count==1:
+         print(col)
+
+choosing=int(input())  
+    
+if choosing==1:
+   max_flower_variations()
+elif choosing==2:
+    col=input()
+    colour_variations(col)
+elif choosing==3:
+    cost=int(input())
+    cost_flower(cost)
+elif choosing==4:
+    unique_colours()
+else:
+    print('invalid input')
+      
 
          
 
