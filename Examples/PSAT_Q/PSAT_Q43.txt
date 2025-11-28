@@ -1,0 +1,35 @@
+# Read input
+N = int(input("Enter size of array: "))
+K = int(input("Enter K: "))
+arr = list(map(int, input("Enter array elements: ").split()))
+
+# Selection sort for first K smallest
+for i in range(K):
+    small = i
+    for j in range(i+1, N):
+        if arr[j] < arr[small]:
+            small = j
+    # Swap
+    temp = arr[i]
+    arr[i] = arr[small]
+    arr[small] = temp
+
+# Output
+print("The first", K, "smallest elements are:")
+for i in range(K):
+    print(arr[i], end=" ")
+Read N, K
+Declare arr[N], i, j, small, temp
+
+For i = 0 to K-1:
+    small = i
+    For j = i+1 to N-1:
+        If arr[j] < arr[small]:
+            small = j
+    temp = arr[i]
+    arr[i] = arr[small]
+    arr[small] = temp
+
+Output "The first K smallest elements are:"
+For i = 0 to K-1:
+    Print arr[i]
