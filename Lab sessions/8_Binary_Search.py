@@ -19,4 +19,4 @@ result = binary_search(numbers, x)
 if result != -1:
     print(f"Element {x} found at index {result}")
 else:
-    print(f"Element {x} not")
+    print(f"Element {x} not found")
