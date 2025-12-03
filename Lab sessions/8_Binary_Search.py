@@ -1,4 +1,4 @@
-def binary_search(arr, target):
+'''def binary_search(arr, target):
     low = 0
     high = len(arr) - 1
     while low <= high:
@@ -19,4 +19,6 @@ result = binary_search(numbers, x)
 if result != -1:
     print(f"Element {x} found at index {result}")
 else:
-    print(f"Element {x} not found")
+    print(f"Element {x} not found")'''
+a=[[0]*2]*3
+print(a)
