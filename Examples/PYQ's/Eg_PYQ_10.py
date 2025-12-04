@@ -93,4 +93,23 @@ def demanding_feild(a):
     print(dict1)
     print(max(dict1.values()))
 demanding_feild(UsedInfeilds())
+# Question 6
+def countryAndFields(a, b):
+    dict1 = {}
+    for country in b:
+        # initialize all industries to "No" once
+        dict1[country] = {field: "No" for field in a}
+        # check minerals
+        for mineral, usage in mineral_data.items():
+            if country == usage["Top Producer"] or country in usage["Next Two"]:
+                for field in usage["Usage"]:
+                    dict1[country][field] = "Yes"
+    print(dict1)
+
+
+
+
+
+
+           
     
